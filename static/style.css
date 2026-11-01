@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #172b45;
+}
+
+/* Navigation */
+nav {
+    background: #102139;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 span {
+    color: #4294ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #4294ff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 440px;
+    padding: 75px 7%;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(90deg, #102139 15%, #102139dd 50%, #10213933),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #4294ff;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    color: #e0e7f0;
+}
+
+.btn {
+    display: inline-block;
+    background: #287df0;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1260ce;
+    transform: translateY(-2px);
+}
+
+/* Features */
+.features {
+    padding: 45px 7%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #607086;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 12px;
+    flex: 1;
+    border: 1px solid #e0e7f0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #10213915;
+}
+
+.card .icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #607086;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #102139;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Mobile Screen */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}

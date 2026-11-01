@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+  
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+    
+
+      
+</head>
+
+<body>
+
+    <nav>
+        <h2>Car Price <span>Prediction</span></h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/predict">Predict Price</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Know the Real Value <span>of Your Car</span></h1>
+
+            <p>
+                Get the best estimated selling price of a used car
+                using Machine Learning. Enter your car details and
+                get a price estimate in seconds.
+            </p>
+
+            <a href="/predict" class="btn">Predict Your Car Price →</a>
+        </div>
+    </section>
+
+    <section class="features" id="about">
+        <h2>Features</h2>
+
+        <p class="subtitle">
+            Smart predictions powered by Machine Learning.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Smart Predictions</h3>
+                <p>Estimate car prices using a trained ML model.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Quick Results</h3>
+                <p>Get an estimated price in just a few seconds.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Use car features</h3>
+                <p>Enetr your car features and get accurate result</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🖥️</div>
+                <h3>Multiple car Features</h3>
+                <p>Consider model,age, kilometres driven and many more</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Car Price Prediction | Machine Learning Project | made by RAHUL VERMA</p>
+        <p>contact-rahulvermaott07@gmail.com</p>
+    </footer>
+
+</body>
+</html>

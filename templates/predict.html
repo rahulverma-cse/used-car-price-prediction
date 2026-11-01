@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2>AutoValue</h2>
+        <a href="/">Home</a>
+    </nav>
+
+
+    <section class="page-header">
+        <p class="tagline">SMART CAR VALUATION</p>
+        <h1>Find Your Car's <span>True Value</span></h1>
+        <p>Enter your car details and get an estimated resale price.</p>
+    </section>
+
+    <main class="container">
+
+        <div class="form-heading">
+            <h2>Car Details</h2>
+            <p>Fill in the information below to estimate the price.</p>
+        </div>
+
+        <form action="{{ url_for('predict') }}" method="POST">
+
+            <div class="form-grid">
+
+
+
+                <div class="form-group">
+                    <label for="model">Car Model</label>
+                    <input type="text" id="model" name="model" placeholder="e.g. Alto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vehicle_age">Vehicle Age (years)</label>
+                    <input type="number" id="vehicle_age" name="vehicle_age" min="0" placeholder="e.g. 5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="km_driven">Kilometers Driven</label>
+                    <input type="number" id="km_driven" name="km_driven" min="0" placeholder="e.g. 50000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seller_type">Seller Type</label>
+                    <select id="seller_type" name="seller_type" required>
+                        <option value="">Select seller type</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Trustmark Dealer">Trustmark Dealer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fuel_type">Fuel Type</label>
+                    <select id="fuel_type" name="fuel_type" required>
+                        <option value="">Select fuel type</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                        <option value="LPG">LPG</option>
+                        <option value="Electric">Electric</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="transmission_type">Transmission</label>
+                    <select id="transmission_type" name="transmission_type" required>
+                        <option value="">Select transmission</option>
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mileage">Mileage (km/l)</label>
+                    <input type="number" id="mileage" name="mileage" step="any" min="0" placeholder="e.g. 19.70"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="engine">Engine (CC)</label>
+                    <input type="number" id="engine" name="engine" min="0" placeholder="e.g. 1197" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="max_power">Maximum Power (bhp)</label>
+                    <input type="number" id="max_power" name="max_power" step="any" min="0" placeholder="e.g. 82.0"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seats">Number of Seats</label>
+                    <input type="number" id="seats" name="seats" min="1" step="1" placeholder="e.g. 5" required>
+                </div>
+
+        
+
+        <button type="submit" class="predict-btn">
+            Predict Car Price →
+        </button>
+
+    </form>

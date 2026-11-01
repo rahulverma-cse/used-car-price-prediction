@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Valuation Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="/" class="logo">Auto<span>Value</span></a>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="{{ url_for('predict') }}">Predict Again</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <div class="success-icon">✓</div>
+            <p class="tagline">SMART CAR VALUATION</p>
+            <h1>Your Valuation Is <span>Ready!</span></h1>
+            <p>Here is the estimated resale value of your car.</p>
+        </section>
+
+        <section class="price-card">
+
+            <p class="price-label">ESTIMATED MARKET PRICE</p>
+
+            <h2 class="price">
+                ₹ {{ "{:,.0f}".format(prediction) }}
+            </h2>
+
+            <div class="price-status">
+                <span class="status-dot"></span>
+                Estimated Resale Value
+            </div>
+
+            <div class="price-divider"></div>
+
+            <p class="price-note">
+                This price is predicted by our machine learning model
+                based on the details provided.
+            </p>
+
+        </section>
+
+        <section class="info-card">
+            <div class="info-icon">i</div>
+            <div>
+                
+                <p>
+                    The actual selling price may vary depending on the
+                    car's condition, location, service history and
+                    current market demand.
+                </p>
+            </div>
+        </section>
+
+        <section class="actions">
+            <a href="{{ url_for('predict') }}" class="primary-btn">
+                Predict Another Car <span>→</span>
+            </a>
+
+            <a href="/" class="secondary-btn">
+                Back to Home
+            </a>
+        </section>
+
+        <footer>
+            <p>©  AutoValue · Smart decisions, better valuations.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
