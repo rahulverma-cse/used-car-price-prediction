@@ -1,6 +1,5 @@
-import numpy as np 
 import pandas as pd 
-from flask import Flask,render_template,request,jsonify
+from flask import Flask,render_template,request
 import joblib
 import warnings
 warnings.filterwarnings("ignore")
@@ -66,7 +65,5 @@ def predict():
 
 
 
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-
